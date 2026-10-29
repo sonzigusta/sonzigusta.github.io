@@ -1,0 +1,49 @@
+[
+  {
+    "id": "fields-radiation",
+    "number": "01",
+    "title": "From fields to radiation",
+    "description": "Maxwell 방정식에서 출발해 지연 potential, 에너지 흐름과 dipole 방사로 이어지는 경로입니다.",
+    "ids": [
+      "maxwell-equations",
+      "retarded-potentials",
+      "poynting-theorem",
+      "dipole-radiation"
+    ]
+  },
+  {
+    "id": "plane-wave-generator",
+    "number": "02",
+    "title": "Toward a plane-wave generator",
+    "description": "평면파의 조건을 이해하고 배열 합성과 QZ 평가 기준으로 연결합니다.",
+    "ids": [
+      "plane-waves",
+      "near-far-field",
+      "array-factor",
+      "pwg-quiet-zone"
+    ]
+  },
+  {
+    "id": "materials-waves",
+    "number": "03",
+    "title": "How materials shape waves",
+    "description": "매질의 응답을 구분한 뒤 전파와 경계 조건을 유도합니다.",
+    "ids": [
+      "constitutive-relations",
+      "maxwell-equations",
+      "plane-waves",
+      "boundary-conditions"
+    ]
+  },
+  {
+    "id": "bench",
+    "number": "04",
+    "title": "From a line to the lab bench",
+    "description": "전송선로의 진행파와 반사파를 실제 S-parameter 측정에 연결합니다.",
+    "ids": [
+      "transmission-lines",
+      "s-parameters",
+      "vna-reference-plane"
+    ]
+  }
+]

@@ -1,0 +1,118 @@
+---
+title: Writing guide
+description: SWR Notes에 글, 수식, 그림과 참고문헌을 추가하는 방법.
+---
+
+```{=html}
+<section class="page-heading"><span class="eyebrow">YOUR NEXT DERIVATION</span><h1>Write it. Derive it. Keep it.</h1><p>글은 Markdown과 LaTeX 문법을 사용하는 Quarto 파일에 작성합니다. GitHub에 변경 사항을 올리면 사이트가 자동으로 다시 만들어집니다.</p></section>
+```
+
+::: {.article-body .guide-body}
+
+## 1. 처음 한 번만 설치하기
+
+Windows PC에 [VS Code](https://code.visualstudio.com/download), [Git](https://git-scm.com/install/windows), [Quarto](https://quarto.org/docs/get-started/)를 설치하고, VS Code의 확장 메뉴에서 **Quarto**를 추가합니다. HTML 글과 수식만 작성한다면 Python, R, LaTeX 배포판은 필요하지 않습니다.
+
+PowerShell에서 다음 명령으로 저장소를 가져옵니다. 이미 내려받았다면 같은 명령을 다시 실행하지 말고 그 폴더를 열어주세요.
+
+```powershell
+git clone https://github.com/sonzigusta/sonzigusta.github.io.git
+cd sonzigusta.github.io
+code .
+```
+
+## 2. 글 파일 만들기
+
+`templates/new-note.qmd`를 복사해 `posts/새-글-이름/index.qmd`로 저장합니다. 글 이름은 영문 소문자, 숫자, 하이픈을 사용합니다. **날짜는 실제 작성일로 바꾸세요.**
+
+```yaml
+---
+title: "My next derivation"
+description: "이 글에서 답하려는 핵심 질문"
+date: "2026-10-29"
+topic: classical
+categories: [Maxwell, Derivation]
+foundation: false
+draft: false
+---
+```
+
+`topic`은 다음 네 값 중 하나입니다. `categories`는 검색할 때 사용하는 자유로운 태그입니다.
+
+| topic | 주제 |
+|---|---|
+| `antennas` | Antennas |
+| `rf` | Radio Frequency |
+| `classical` | Classical Electrodynamics |
+| `engineering` | Advanced Engineering Electromagnetism |
+
+`draft: true`를 사용하면 공개 사이트의 목록과 배포 결과에서 제외됩니다. **공개 저장소에 올린 원고 파일 자체는 공개됩니다.**
+
+## 3. 수식과 수식 번호
+
+문장 속 수식은 `$k=\omega\sqrt{\mu\varepsilon}$`처럼 작성합니다. 여러 줄의 독립 수식에는 `$$`를 사용합니다.
+
+```markdown
+$$
+\nabla\times\mathbf E=-\frac{\partial\mathbf B}{\partial t}
+$$ {#eq-faraday}
+
+식 [-@eq-faraday]에서 시작합니다.
+```
+
+실제로 렌더링하면 아래처럼 표시됩니다. 식 [-@eq-writing-faraday]를 클릭하면 해당 수식으로 이동합니다.
+
+$$
+\nabla\times\mathbf E=-\frac{\partial\mathbf B}{\partial t}
+$$ {#eq-writing-faraday}
+
+여러 식을 정렬할 때는 다음처럼 작성합니다.
+
+```latex
+$$
+\begin{aligned}
+\nabla\cdot\mathbf D &= \rho_{\mathrm f},\\
+\nabla\cdot\mathbf B &= 0.
+\end{aligned}
+$$ {#eq-gauss}
+```
+
+수식·그림의 label은 각각 `eq-`, `fig-`로 시작하며, **한 글 안에서 중복되지 않게** 만듭니다. LaTeX 문법을 쓸 수 있지만 모든 LaTeX 패키지가 웹에서 지원되는 것은 아니므로 미리보기에서 확인합니다.
+
+## 4. 그림과 참고문헌
+
+그림 파일은 해당 글의 폴더에 함께 넣고 상대 경로로 참조합니다.
+
+```markdown
+![그림 설명](figure.png){#fig-result}
+
+그림 [-@fig-result]와 같이 나타납니다.
+```
+
+아래는 같은 방식으로 추가한 예제입니다. 그림 [-@fig-writing-dipole]은 이상적인 짧은 dipole의 정규화 전계 크기 패턴이며 측정 결과가 아닙니다.
+
+![짧은 dipole의 전계 크기 패턴: 축에서 측정한 각도 θ에 대해 |sin θ|에 비례합니다.](/assets/dipole-pattern.svg){#fig-writing-dipole}
+
+참고문헌 정보는 저장소 루트의 `references.bib`에 BibTeX 형식으로 추가합니다. 본문에서는 `@tong-em`처럼 key를 쓰면 됩니다. 예를 들어 [@tong-em]을 인용하면 이 글 하단에 서지 정보가 생성됩니다.
+
+## 5. 미리보기와 공개하기
+
+사이트 폴더의 터미널에서 다음 명령을 실행하면 저장할 때 변경 사항을 확인할 수 있습니다.
+
+```powershell
+quarto preview
+```
+
+공개하기 전에 수식 번호, 그림, 링크와 모바일 화면을 확인합니다. 그다음 VS Code의 **소스 제어(Source Control)**에서 변경 사항을 커밋하고 GitHub와 동기화하거나 다음 명령을 사용합니다.
+
+```powershell
+git add .
+git commit -m "Add my new study note"
+git push
+```
+
+GitHub **Actions** 탭의 **Build and publish SWR Notes**가 성공하면 공개 사이트에 반영됩니다. 실패하면 실행 기록의 오류를 확인한 뒤 수정하고 다시 올립니다. 다른 PC에서도 같은 글을 작업했다면 작업 전에 `git pull`로 최신 내용을 가져옵니다.
+
+PC 설치 없이 작은 수정을 하려면 각 글 위의 **Edit on GitHub**를 사용할 수 있습니다. 글의 실제 공개 여부는 `main` 브랜치의 원고와 Actions 배포 결과로 결정됩니다. 방문자의 북마크·읽음 표시는 각 브라우저에만 저장됩니다.
+
+:::

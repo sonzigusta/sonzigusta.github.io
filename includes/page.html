@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="$if(lang)$$lang$$else$ko$endif$">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101214">
+  <meta name="description" content="$if(description)$$description$$else$Seungmin Wave &amp; Radio Frequency Notes$endif$">
+  <title>$pagetitle$ · SWR Notes</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
+  $for(header-includes)$
+  $header-includes$
+  $endfor$
+  $if(math)$
+  $math$
+  $endif$
+</head>
+<body class="$if(swr-article)$article-page$else$index-page$endif$">
+<a class="skip" href="#main">본문으로 이동</a>
+<header class="header">
+  <div class="header-left"><button class="icon-button menu-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="sidebar"><span data-icon="menu"></span></button><a class="brand" href="/" aria-label="SWR Notes 홈"><img src="/assets/favicon.svg" alt="" width="37" height="37"><span>SWR<span class="brand-light"> Notes</span></span></a><span class="brand-divider"></span><span class="brand-caption">SEUNGMIN WAVE & RF</span></div>
+  <nav class="top-nav" aria-label="주요 탐색"><a href="/" data-nav="notes">Study notes</a><a href="/paths.html" data-nav="paths">Learning paths</a><a href="/references.html" data-nav="references">References</a></nav>
+  <div class="header-right"><a class="source-link" href="https://github.com/sonzigusta/sonzigusta.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub 소스 저장소 열기"><span data-icon="github"></span><span>View source</span></a><span class="avatar" title="Seungmin">S</span></div>
+</header>
+<div class="drawer-shade" id="drawer-shade" hidden></div>
+<aside class="sidebar" id="sidebar" aria-label="사이드 메뉴" inert>
+  <div class="drawer-top"><span class="mono">EXPLORE SWR</span><button id="menu-close" class="icon-button" aria-label="메뉴 닫기"><span data-icon="close"></span></button></div>
+  <a href="/" class="drawer-link"><span data-icon="layers"></span> All study notes <span id="drawer-count"></span></a>
+  <a href="/?view=saved#library" class="drawer-link"><span data-icon="bookmark"></span> Bookmarked</a>
+  <p class="drawer-label">SUBJECTS</p><div id="drawer-topics"></div>
+  <p class="drawer-label">CONNECT THE DOTS</p><a href="/paths.html" class="drawer-link"><span data-icon="route"></span> Learning paths</a><a href="/references.html" class="drawer-link"><span data-icon="book"></span> References</a><a href="/writing.html" class="drawer-link"><span data-icon="edit"></span> Writing guide</a>
+  <div class="drawer-bottom"><span class="signal-dot"></span> A little clearer, every day.<p>Seungmin Wave & Radio Frequency Notes</p></div>
+</aside>
+<main id="main" tabindex="-1">
+$if(swr-article)$
+  <div class="article-toolbar"><a href="/" class="subtle-link"><span data-icon="back"></span> All notes</a><div class="article-tools"><a class="button ghost" id="edit-on-github" href="https://github.com/sonzigusta/sonzigusta.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub에서 원고 편집" title="Edit on GitHub"><span data-icon="edit"></span> Edit on GitHub</a><button class="button ghost" id="read-note" aria-pressed="false"><span data-icon="check"></span> 읽음으로 표시</button><button class="bookmark-button" id="save-note" aria-label="북마크 추가" aria-pressed="false"><span data-icon="bookmark"></span></button></div></div>
+  <div class="article-layout"><article><header class="article-heading"><span class="category" id="article-topic">$topic$</span><h1>$title$</h1><p>$description$</p><div class="article-info"><span>$if(foundation)$FOUNDATION NOTE$else$STUDY NOTE$endif$</span><time>$date$</time><span id="article-time"></span></div>$if(foundation)$<div class="foundation-note">개념과 유도를 점검하기 위한 기초 학습 노트입니다. 실제 측정·시뮬레이션 결과를 나타내지 않습니다.</div>$endif$</header><div class="article-body" id="article-body">$body$</div><div class="article-bottom"><span class="eyebrow">KEEP EXPLORING</span><div class="related-notes" id="related-notes"></div></div></article><aside class="article-aside"><div class="article-aside-inner"><h2 class="aside-title">ON THIS PAGE</h2><nav class="toc" id="article-toc" aria-label="본문 목차"></nav><div class="field-box"><span class="comment">// field notes</span><br>time <span class="green">e^(+jωt)</span><br>units <span class="green">SI</span><br><span class="comment">// check every assumption.</span></div><p class="saved-banner">북마크와 읽음 표시는 현재 브라우저에 저장됩니다.</p></div></aside></div>
+$else$
+  $body$
+$endif$
+</main>
+<footer class="footer"><a class="footer-brand" href="/">SWR NOTES <span>·</span> Stay curious. Keep deriving.</a><div><span>Built with Quarto · MathJax</span><a href="/writing.html" class="text-button">글 작성 안내</a><a href="https://github.com/sonzigusta/sonzigusta.github.io" target="_blank" rel="noopener noreferrer" class="text-button">GitHub</a></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/assets/catalog.js"></script><script src="/assets/components.js"></script><script src="/assets/site.js"></script>
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>

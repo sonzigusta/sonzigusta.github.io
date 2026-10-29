@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Electromagnetics · MIT 6.630",
+    "by": "MIT OpenCourseWare",
+    "description": "Maxwell 방정식, 편파, 전송선로와 안테나를 연결하는 공학 전자기학 강좌. 관련 이론을 더 깊게 공부할 때 사용할 공식 공개 자료입니다.",
+    "url": "https://ocw.mit.edu/courses/6-630-electromagnetics-fall-2006/",
+    "topics": "ENGINEERING EM · ANTENNAS · RF"
+  },
+  {
+    "title": "Electromagnetism · David Tong",
+    "by": "University of Cambridge · Author’s lecture notes",
+    "description": "정전기·정자기부터 potential, 상대론, 복사와 물질의 전자기학까지. 수학적 유도와 물리적 해석을 함께 공부하기 위한 공개 강의 노트입니다.",
+    "url": "https://davidtong.org/teaching/electromagnetism/",
+    "topics": "CLASSICAL ED · POTENTIALS · RADIATION"
+  },
+  {
+    "title": "Electromagnetics and Applications · MIT 6.013",
+    "by": "MIT OpenCourseWare",
+    "description": "전자기 파동, 전송선로, dipole 배열을 다루는 공개 강의 노트 모음. 기초 노트의 개념을 강의 자료와 대조하며 확인할 수 있습니다.",
+    "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/resources/lecture-notes/",
+    "topics": "WAVES · TRANSMISSION LINES · ARRAYS"
+  }
+]

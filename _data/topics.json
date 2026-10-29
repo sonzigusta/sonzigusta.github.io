@@ -1,0 +1,34 @@
+[
+  {
+    "id": "antennas",
+    "name": "Antennas",
+    "short": "Antennas",
+    "caption": "Radiation, arrays & quiet zones",
+    "icon": "antenna",
+    "color": "#a1e8c8"
+  },
+  {
+    "id": "rf",
+    "name": "Radio Frequency",
+    "short": "RF",
+    "caption": "Networks, lines & measurements",
+    "icon": "wave",
+    "color": "#b8b7eb"
+  },
+  {
+    "id": "classical",
+    "name": "Classical Electrodynamics",
+    "short": "Classical ED",
+    "caption": "Fields, potentials & causality",
+    "icon": "orbit",
+    "color": "#d5bd96"
+  },
+  {
+    "id": "engineering",
+    "name": "Advanced Engineering Electromagnetism",
+    "short": "Engineering EM",
+    "caption": "Materials, waves & boundaries",
+    "icon": "layers",
+    "color": "#9cc9db"
+  }
+]

@@ -1,0 +1,36 @@
+---
+title: "Where electromagnetic energy goes"
+description: "두 curl 방정식을 내적해 에너지 보존식을 만들고, Poynting vector의 방향과 의미를 읽습니다."
+date: "2026-10-19"
+topic: classical
+categories: ["Energy","Poynting","Power"]
+---
+## 두 Maxwell 방정식을 연결하기
+벡터 항등식 ∇ · (E × H) = H · (∇ × E) − E · (∇ × H)에 두 curl 방정식을 대입합니다. 균일하고 선형이며 비분산인 무손실 매질에서는 다음 형태로 정리됩니다.
+
+$$
+\begin{aligned}
+\frac{\partial u}{\partial t}+\nabla\cdot\mathbf S&=-\mathbf J_{\mathrm f}\cdot\mathbf E,\\
+\mathbf S&=\mathbf E\times\mathbf H,\\
+u&=\frac{1}{2}(\mathbf E\cdot\mathbf D+\mathbf B\cdot\mathbf H).
+\end{aligned}
+$$ {#eq-poynting-theorem-1}
+
+국소 장 에너지의 변화, 표면을 통해 빠져나가는 에너지 흐름, 전하에 전달되는 일이 균형을 이룹니다. 분산·손실 매질에서 저장 에너지를 위의 단순한 u로 일반화하면 안 됩니다.
+
+## 적분형의 물리적 의미
+부피에 적분하면 ∇ · S 항은 닫힌 표면을 통과하는 outward flux가 됩니다. 원천이 공급한 전력이 방사, 물질 손실, 저장 에너지 변화로 어디에 배분되는지 해석하는 출발점입니다.
+
+## 주파수 영역의 평균 전력
+peak phasor convention을 사용하면 시간 평균 Poynting vector는 다음과 같습니다.
+
+$$
+\langle\mathbf S\rangle=\frac12\operatorname{Re}(\mathbf E\times\mathbf H^{\ast}).
+$$ {#eq-poynting-theorem-2}
+
+RMS phasor를 쓰면 1/2 계수가 달라지므로 입력 전력 정규화와 함께 확인합니다. 원거리 안테나의 총 방사 전력은 이 평균 flux의 방사 방향 성분을 충분히 큰 닫힌 표면에 적분하여 계산합니다.
+
+## 더 읽기
+
+전자기학의 물리적 유도와 potential을 더 살펴보려면 [@tong-em]을 참고하세요.
+

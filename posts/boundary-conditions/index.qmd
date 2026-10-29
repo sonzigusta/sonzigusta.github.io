@@ -1,0 +1,39 @@
+---
+title: "Boundary conditions, derived with a pillbox and a loop"
+description: "외워 둔 경계 조건을 Maxwell 적분형으로 다시 만들고 법선 방향과 표면 원천의 부호를 확인합니다."
+date: "2026-10-20"
+topic: engineering
+categories: ["Boundaries","TE / TM","Derivation"]
+---
+## 법선을 먼저 정하기
+매질 1에서 매질 2로 향하는 단위 법선을 n̂으로 정의합니다. 경계면에 자유 면전하 ρs와 자유 면전류 Js가 있을 수 있다고 둡니다. 불연속면에서는 미분형을 직접 대입하기보다 작은 적분 영역에서 출발하는 편이 명확합니다.
+
+## Pillbox로 얻는 법선 조건
+경계면을 가로지르는 얇은 pillbox에 발산 방정식을 적용하고 높이를 0으로 보냅니다. 유한한 장을 가정하면 옆면 기여는 사라집니다.
+
+$$
+\begin{aligned}
+\hat{\mathbf n}\cdot(\mathbf D_2-\mathbf D_1)&=\rho_{\mathrm s},\\
+\hat{\mathbf n}\cdot(\mathbf B_2-\mathbf B_1)&=0.
+\end{aligned}
+$$ {#eq-boundary-conditions-1}
+
+## Loop로 얻는 접선 조건
+경계면을 가로지르는 작은 직사각형 loop를 취합니다. 특이한 자기 면전류가 없는 표준 Maxwell 모델에서 다음을 얻습니다.
+
+$$
+\begin{aligned}
+\hat{\mathbf n}\times(\mathbf E_2-\mathbf E_1)&=0,\\
+\hat{\mathbf n}\times(\mathbf H_2-\mathbf H_1)&=\mathbf J_{\mathrm s}.
+\end{aligned}
+$$ {#eq-boundary-conditions-2}
+
+전계의 법선 성분 자체가 항상 연속인 것은 아닙니다. 자유 면전하가 없으면 법선 D가 연속이며, ε가 다르면 법선 E는 일반적으로 달라집니다.
+
+## 평면파 반사·투과로 연결
+입사면과 편파를 정한 뒤, 입사·반사·투과파의 접선 E와 H를 경계면에서 연결합니다. 모든 위치에서 같은 위상을 가져야 한다는 조건이 접선 파수의 일치를 주고, 이로부터 반사 법칙과 Snell 법칙을 얻습니다. TE/TM은 입사면을 기준으로 정의합니다.
+
+## 더 읽기
+
+전파·안테나·공학 전자기학의 연결은 [@mit-em]에서 더 공부할 수 있습니다.
+

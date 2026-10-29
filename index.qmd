@@ -1,0 +1,6 @@
+---
+title: Welcome!
+description: Exploring antennas, waves, and RF through classical electrodynamics and advanced engineering electromagnetism.
+---
+
+{{< include _generated/home.html >}}

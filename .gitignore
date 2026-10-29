@@ -1,0 +1,9 @@
+/_site/
+/.quarto/
+/.openai/
+/assets/catalog.js
+.DS_Store
+Thumbs.db
+
+
+**/*.quarto_ipynb

@@ -1,0 +1,34 @@
+---
+title: "The dipole: from current to radiation"
+description: "짧은 전류 소자의 원거리장을 출발점으로, sin θ 패턴과 방사 전력의 관계를 읽습니다."
+date: "2026-10-27"
+topic: antennas
+categories: ["Dipole","Radiation","Pattern"]
+---
+## 모델의 가정
+자유공간에서 z 방향의 매우 짧은 전류 소자를 생각합니다. 길이 ℓ에 대해 kℓ ≪ 1이고, 소자 위 전류를 I0로 일정하게 근사합니다. 실제 유한 길이 dipole의 전류 분포와 이 이상적인 Hertzian dipole은 구별해야 합니다.
+
+## 원거리장과 각도 의존성
+e^(jωt) convention에서 외향파는 e^(−jkr)입니다. 원거리에서는 1/r 항이 지배하며 다음을 얻습니다.
+
+$$
+\begin{aligned}
+E_\theta &\simeq j\eta_0 k I_0\ell\,\frac{e^{-jkr}}{4\pi r}\sin\theta,\\
+H_\phi &\simeq \frac{E_\theta}{\eta_0}.
+\end{aligned}
+$$ {#eq-dipole-radiation-1}
+
+θ는 소자의 축인 +Z에서 측정합니다. 따라서 축 방향에서는 방사가 0이고, 축에 수직인 θ = 90° 방향에서 최대입니다. 2차원에서 보이는 두 lobe는 3차원 toroidal 패턴의 단면입니다.
+
+## 장 패턴과 전력 패턴
+정규화한 장의 크기는 |sinθ|이지만 방사 강도는 sin²θ에 비례합니다. 패턴을 dB로 바꿀 때 장에는 20 log10, 전력에는 10 log10을 사용해야 합니다. 서로 대응하는 정규화 값이라면 같은 dB 패턴을 얻습니다.
+
+## 유한 길이 안테나로 확장
+실제 dipole에서는 전류 위상과 크기가 길이에 따라 변합니다. 전류 요소의 기여를 공간 위상과 함께 적분해야 하며, 단순한 sinθ 패턴을 임의 길이에 그대로 적용할 수 없습니다.
+
+> 도식의 목적: 홈 화면의 radiation 그림은 짧은 dipole의 정규화된 장 패턴을 나타냅니다. 제작 안테나의 시뮬레이션 결과는 아닙니다.
+
+## 더 읽기
+
+전파·안테나·공학 전자기학의 연결은 [@mit-em]에서 더 공부할 수 있습니다.
+

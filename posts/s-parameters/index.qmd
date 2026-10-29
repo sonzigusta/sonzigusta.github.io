@@ -1,0 +1,36 @@
+---
+title: "S-parameters without losing the reference"
+description: "입사파와 반사파의 관계를 정의하고 S11, return loss, VSWR의 부호와 범위를 구분합니다."
+date: "2026-10-22"
+topic: rf
+categories: ["S-parameters","Matching","VNA"]
+---
+## 입사파와 출사파
+동일한 실수 기준 임피던스로 정규화한 포트에서 입사파 a와 출사파 b를 쓰면 b = Sa입니다. Sij는 다른 포트를 정합시킨 상태에서 j번 포트의 입사파가 i번 포트의 출사파에 기여하는 비율입니다.
+
+## S11과 반사계수
+1-port 또는 다른 포트를 정합한 조건에서 S11은 입력 반사계수입니다. 기준면과 기준 임피던스에 따라 값이 달라지므로 이 두 조건은 데이터의 일부로 기록해야 합니다.
+
+$$
+\begin{aligned}
+S_{11,\mathrm{dB}}&=20\log_{10}|S_{11}|,\\
+\mathrm{RL}&=-20\log_{10}|S_{11}|,\\
+\mathrm{VSWR}&=\frac{1+|\Gamma|}{1-|\Gamma|}.
+\end{aligned}
+$$ {#eq-s-parameters-1}
+
+수동 1-port에서 일반적으로 S11의 dB 값은 0 이하이고, return loss는 0 이상입니다. VSWR 식은 전파 가능한 단일 모드와 |Γ| < 1 조건의 해석에 해당합니다.
+
+## 정합과 방사 효율
+작은 |S11|은 입력 전력이 적게 반사된다는 뜻입니다. 흡수된 전력이 모두 방사된다는 뜻은 아닙니다. 저항성 손실이 큰 안테나도 좋은 입력 정합을 보일 수 있으므로 radiation efficiency와 함께 해석합니다.
+
+## 비교 전 체크
+- 포트 reference impedance가 같은가요?
+- calibration 또는 de-embedding 기준면이 같은가요?
+- 사용하지 않는 포트의 종단 조건이 같은가요?
+- S21의 변화가 안테나 효과인지 경로·정렬 효과인지 분리했나요?
+
+## 더 읽기
+
+전파·안테나·공학 전자기학의 연결은 [@mit-em]에서 더 공부할 수 있습니다.
+

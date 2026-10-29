@@ -1,0 +1,39 @@
+---
+title: "My next derivation"
+description: "이 글에서 답하려는 핵심 질문"
+date: "2026-10-29"
+topic: classical
+categories: [Derivation]
+foundation: false
+draft: false
+---
+
+## 핵심 질문
+
+어떤 물리적 현상 또는 수학적 관계를 이해하려는지 적습니다.
+
+## 가정과 convention
+
+- SI 단위계
+- 시간 convention: $e^{j\omega t}$
+- 좌표계, 매질과 경계 조건을 명시합니다.
+
+## 유도
+
+$$
+\nabla\times\mathbf E=-\frac{\partial\mathbf B}{\partial t}
+$$ {#eq-start}
+
+식 [-@eq-start]에서 출발합니다.
+
+## 해석과 검증
+
+각 근사가 무엇을 무시했는지, 단위와 극한이 올바른지 확인합니다.
+
+## 다음 질문
+
+이 결과로부터 이어지는 질문을 기록합니다.
+
+## 참고문헌
+
+예제 인용: @tong-em.

@@ -1,0 +1,42 @@
+---
+title: "From Maxwell to the plane-wave equation"
+description: "균일·등방·무손실 매질에서 파동 방정식을 유도하고, k, E, H의 방향을 연결합니다."
+date: "2026-10-23"
+topic: engineering
+categories: ["Plane wave","Derivation","Polarization"]
+---
+## 가정부터 명시하기
+원천이 없는 균일·등방·무손실 매질에서 ε와 μ는 실수 상수이고 Jf = 0, ρf = 0이라고 둡니다. 균일 매질이므로 ∇ · D = 0으로부터 ∇ · E = 0을 쓸 수 있습니다.
+
+## 회전을 한 번 더 취하기
+Faraday 법칙의 양변에 curl을 취하고 Ampère–Maxwell 법칙을 대입합니다.
+
+$$
+\begin{aligned}
+\nabla\times(\nabla\times\mathbf E)&=-\mu\frac{\partial}{\partial t}(\nabla\times\mathbf H),\\
+\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E&=-\mu\varepsilon\frac{\partial^2\mathbf E}{\partial t^2},\\
+\nabla^2\mathbf E-\mu\varepsilon\frac{\partial^2\mathbf E}{\partial t^2}&=0.
+\end{aligned}
+$$ {#eq-plane-waves-1}
+
+여기서 파동 속도 v = 1/√(με)를 얻습니다. 이 유도에서 ε를 미분 밖으로 뺀 것은 균일 매질 가정을 사용한 단계입니다.
+
+## 평면파 해와 장의 방향
+e^(jωt) convention의 +k 방향 평면파를 E(r) = E0 e^(−jk · r)로 씁니다. 공간 미분을 −jk로 바꾸면 다음 관계를 얻습니다.
+
+$$
+\begin{aligned}
+\mathbf k\cdot\mathbf E&=0, & \mathbf H&=\frac{1}{\eta}\hat{\mathbf k}\times\mathbf E,\\
+\eta&=\sqrt{\frac{\mu}{\varepsilon}}, & |\mathbf k|&=\omega\sqrt{\mu\varepsilon}.
+\end{aligned}
+$$ {#eq-plane-waves-2}
+
+E, H, k는 오른손 관계를 이룹니다. 진행 방향이 +Y이고 E가 +X 방향이면 H는 −Z 방향이어서 E × H는 +Y를 향합니다.
+
+## PWG에 연결하기
+이상적인 단일 평면파에서는 진행 방향에 수직인 평면에서 phasor가 일정합니다. 유한 배열에서는 그 조건을 유한 영역 안에서 근사합니다. 따라서 한 성분의 phase flatness와 전체 전자기장이 평면파에 가깝다는 주장은 구분해서 검증해야 합니다.
+
+## 더 읽기
+
+전파·안테나·공학 전자기학의 연결은 [@mit-em]에서 더 공부할 수 있습니다.
+

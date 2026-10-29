@@ -1,0 +1,40 @@
+---
+title: "E, D, B, H — and what a material actually does"
+description: "필드의 이름과 단위를 구분하고, 매질 응답이 왜 시간 convolution으로 나타나는지 정리합니다."
+date: "2026-10-26"
+topic: engineering
+categories: ["Materials","Constitutive","LTI"]
+---
+## 네 가지 장
+- E: electric field intensity, V/m
+- D: electric flux density 또는 electric displacement, C/m²
+- H: magnetic field intensity, A/m
+- B: magnetic flux density, T = Wb/m²
+
+일반적인 거시적 분해는 D = ε0E + P, B = μ0(H + M)입니다. P와 M은 물질의 전기적·자기적 응답을 기술합니다.
+
+## 선형성과 시간 불변성
+공간적으로 국소적인 선형·시간 불변 매질의 전기 응답은 시간 convolution으로 나타낼 수 있습니다. 단순한 scalar, isotropic 경우를 쓰면 다음과 같습니다.
+
+$$
+\mathbf P(t)=\varepsilon_0\int_0^\infty\chi_{\mathrm e}(\tau)\mathbf E(t-\tau)\,\mathrm d\tau.
+$$ {#eq-constitutive-relations-1}
+
+과거 전계에 대한 응답을 더할 수 있는 이유는 선형성이고, kernel이 두 시각의 차이에만 의존하는 이유는 시간 불변성입니다. 적분을 과거로 제한하는 조건은 인과성입니다.
+
+## 주파수 영역에서는 곱으로
+Fourier 변환하면 convolution은 곱이 되어 D(ω) = ε(ω)E(ω)를 얻습니다. ε가 주파수에 의존하는 것은 물질이 입력을 즉시, 모든 주파수에서 똑같이 따라가지 못한다는 의미입니다. 이방성에서는 ε가 tensor가 되고, 공간 분산까지 고려하면 한 점의 응답이 주변의 전계에도 의존할 수 있습니다.
+
+## 전도전류와 손실 표기
+J = σE 역시 시간 영역의 순간적인 Ohmic 모델로 쓸 수 있습니다. 분산이 있으면 일반적으로 convolution 관계로 확장합니다. 주파수 영역에서 전도 손실을 복소 유전율에 포함시킬 때는 convention을 일치시킵니다.
+
+$$
+\varepsilon_{\mathrm{eff}}=\varepsilon-j\frac{\sigma}{\omega}\qquad\text{for }e^{j\omega t}.
+$$ {#eq-constitutive-relations-2}
+
+σ 항을 εeff에 포함했다면 같은 손실을 전도전류 항으로 다시 더하지 않도록 주의합니다.
+
+## 더 읽기
+
+전파·안테나·공학 전자기학의 연결은 [@mit-em]에서 더 공부할 수 있습니다.
+
