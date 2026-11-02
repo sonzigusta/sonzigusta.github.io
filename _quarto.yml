@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: _site
+  post-render: scripts/version-site.ts
   render:
     - index.qmd
     - notes.qmd

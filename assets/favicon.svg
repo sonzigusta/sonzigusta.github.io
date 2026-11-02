@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#151c1c"/><g fill="none" stroke="#93e1c1" stroke-width="1.7"><path d="M30 32C4 1 1 62 30 32ZM34 32C60 1 63 62 34 32Z"/><path d="M29 32C14 14 12 49 29 32ZM35 32C50 14 52 49 35 32Z" opacity=".48"/></g><path d="M32 13v15m0 8v15" stroke="#dcfff2" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="32" r="2" fill="#e7fff6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>SWR Notes</title>
+  <g fill="none" stroke="#00cde3" stroke-width="5.8" stroke-linecap="round">
+    <path d="M7 24Q32-5 57 24M17 25Q32 10 47 25M17 40Q32 55 47 40M7 41Q32 70 57 41"/>
+  </g>
+  <g fill="none" stroke="#ffbc1b" stroke-width="6.4" stroke-linecap="round">
+    <path d="M7 32.5H28M36 32.5H57"/>
+  </g>
+</svg>
