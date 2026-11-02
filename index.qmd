@@ -1,6 +1,34 @@
 ---
-title: Welcome!
-description: Exploring antennas, waves, and RF through classical electrodynamics and advanced engineering electromagnetism.
+title: SWR Notes
+pagetitle: SWR Notes
+page-layout: full
+body-classes: home
 ---
 
-{{< include _generated/home.html >}}
+::: {.home-hero}
+::: {.hero-heading}
+# SWR Notes {.hero-title .unlisted .unnumbered}
+
+[S]{.initial}eungmin [W]{.initial}ave & [R]{.initial}adio frequency [Notes]{.initial}
+:::
+:::
+
+::: {.welcome-band}
+::: {.home-inner}
+## Welcome! {.unlisted .unnumbered}
+
+SWR Notes explores engineering electromagnetics, connecting physical intuition with mathematical analysis.
+Here, we examine antennas, radiation, and RF from first principles asking how they work, why the equations take their form, and what connects seemingly different phenomena.
+:::
+:::
+
+::: {.maxwell-section aria-label="Maxwell's equations in a homogeneous linear medium"}
+$$
+\begin{aligned}
+\nabla\cdot\mathbf E &= \rho/\varepsilon,\\[0.7em]
+\nabla\cdot\mathbf B &= 0,\\[0.7em]
+\nabla\times\mathbf E &= -\frac{\partial\mathbf B}{\partial t},\\[0.7em]
+\nabla\times\mathbf H &= \mathbf J+\frac{\partial\mathbf D}{\partial t}.
+\end{aligned}
+$$
+:::

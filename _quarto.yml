@@ -1,35 +1,56 @@
 project:
   type: website
   output-dir: _site
-  pre-render: scripts/build-index.ts
   render:
     - index.qmd
-    - paths.qmd
-    - references.qmd
+    - notes.qmd
+    - about.qmd
     - writing.qmd
     - posts/**/*.qmd
   resources:
     - assets/**
     - .nojekyll
+
 website:
   title: SWR Notes
-  description: Seungmin Wave & Radio Frequency Notes — exploring antennas, waves, and electromagnetic theory from first principles.
+  description: Seungmin Wave & Radio Frequency Notes
   site-url: https://sonzigusta.github.io
   favicon: assets/favicon.svg
   search: false
   draft-mode: gone
+  navbar:
+    background: "#10363d"
+    foreground: "#ffffff"
+    logo: assets/favicon.svg
+    collapse-below: md
+    right:
+      - text: Home
+        href: index.qmd
+      - text: Notes
+        href: notes.qmd
+      - text: About me
+        href: about.qmd
+  page-footer:
+    left: SWR Notes · Seungmin Son
+    right:
+      - text: Writing guide
+        href: writing.qmd
+      - text: GitHub
+        href: https://github.com/sonzigusta/sonzigusta.github.io
+  repo-url: https://github.com/sonzigusta/sonzigusta.github.io
+  repo-actions: [edit]
+
 format:
   html:
-    template: includes/page.html
-    theme: none
-    minimal: true
-    lang: ko
+    theme: cosmo
+    css: assets/styles.css
     html-math-method: mathjax
     toc: false
     number-sections: false
     date-format: YYYY.MM.DD
-    link-external-newwindow: false
+    anchor-sections: false
+    code-copy: true
+
 bibliography: references.bib
 execute:
   enabled: false
-

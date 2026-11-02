@@ -1,2 +1,4 @@
-swr-article: true
-foundation: true
+toc: true
+toc-title: On this page
+title-block-banner: false
+date-format: YYYY.MM.DD

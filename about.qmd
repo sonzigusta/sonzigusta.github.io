@@ -1,0 +1,7 @@
+---
+title: About me
+---
+
+Seungmin Son
+
+Notes on waves, antennas, and electromagnetism.

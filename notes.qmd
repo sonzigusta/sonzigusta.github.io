@@ -1,0 +1,25 @@
+---
+title: Notes
+description: 공부하며 정리한 글을 모읍니다.
+listing:
+  contents: posts
+  type: default
+  sort: date desc
+  categories: false
+  fields: [title, description, date, categories]
+  filter-ui: [title, description, categories]
+  sort-ui: false
+  page-size: 20
+---
+
+```{=html}
+<div id="note-topics" class="note-topics" role="group" aria-label="Filter notes by subject"></div>
+```
+
+::: {.notes-empty}
+아직 공개한 글이 없습니다.
+:::
+
+```{=html}
+<script defer src="assets/notes.js"></script>
+```
