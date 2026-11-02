@@ -15,13 +15,15 @@ website:
   title: SWR Notes
   description: Seungmin Wave & Radio Frequency Notes
   site-url: https://sonzigusta.github.io
-  favicon: assets/favicon.svg
+  favicon: assets/swr-symbol.svg
   search: false
   draft-mode: gone
   navbar:
     background: "#10363d"
     foreground: "#ffffff"
-    logo: assets/favicon.svg
+    title: false
+    logo: assets/swr-logo.png
+    logo-alt: SWR Notes
     collapse-below: md
     right:
       - text: Home
