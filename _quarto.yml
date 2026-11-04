@@ -36,12 +36,9 @@ website:
   page-footer:
     left: SWR Notes · Seungmin Son
     right:
-      - text: Writing guide
-        href: writing.qmd
       - text: GitHub
         href: https://github.com/sonzigusta/sonzigusta.github.io
   repo-url: https://github.com/sonzigusta/sonzigusta.github.io
-  repo-actions: [edit]
 
 format:
   html:
