@@ -6,4 +6,4 @@ Seungmin Son
 
 Notes on waves, antennas, and electromagnetism.
 
-hello my name is Seungmin Son. I am a graduate student in the Department of Electrical and Computer Engineering at Seoul National University, where I study antennas and electromagnetics. I am interested in understanding the physical principles behind electromagnetic phenomena and how they can be applied to real-world problems.
+Hello, my name is Seungmin Son. I am a master's student in the Department of Electrical and Computer Engineering at Gwangju Institute of Science and Technology (GIST). I work in the Microwave Sensing and Imaging Laboratory under the supervision of Prof. Kangwook Kim. My research focuses on antennas, electromagnetics, and near-field plane-wave generation. I am interested in understanding the physical principles behind electromagnetic phenomena and connecting them with practical antenna design.
