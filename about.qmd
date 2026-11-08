@@ -4,9 +4,7 @@ title: About me
 
 Seungmin Son
 
-Notes on waves, antennas, and electromagnetism.
-
-Hello, my name is Seungmin Son. I am a master's student in the Department of Electrical and Computer Engineering at Gwangju Institute of Science and Technology (GIST). I work in the Microwave Sensing and Imaging Laboratory under the supervision of Prof. Kangwook Kim. My research focuses on antennas, electromagnetics, and near-field plane-wave generation. I am interested in understanding the physical principles behind electromagnetic phenomena and connecting them with practical antenna design.
+Interests: Electrodynamics, antennas, and radiation.
 
 ## Education
 
