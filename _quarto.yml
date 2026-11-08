@@ -7,7 +7,6 @@ project:
     - notes.qmd
     - about.qmd
     - writing.qmd
-    - research.qmd
     - posts/**/*.qmd
   resources:
     - assets/**
@@ -32,8 +31,6 @@ website:
         href: index.qmd
       - text: Notes
         href: notes.qmd
-      - text: PWG Research
-        href: research.qmd
       - text: About me
         href: about.qmd
   page-footer:
