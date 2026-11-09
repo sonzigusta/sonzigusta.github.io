@@ -1,0 +1,19 @@
+---
+title: "Basic Principle of Radiation"
+description: "Why antennas radiate and how the radiation pattern is formed."
+date: "2026-11-09"
+categories: ["Radiation", "Antennas"]
+draft: false
+---
+
+## 시작하며
+
+이곳에 내용을 작성합니다. 문장 안 수식은 $k=2\pi/\lambda$처럼 적습니다.
+
+## 본문
+
+$$
+\nabla\times\mathbf E=-\frac{\partial\mathbf B}{\partial t}
+$$ {#eq-faraday}
+
+식 [-@eq-faraday]를 바탕으로 내용을 정리합니다.
