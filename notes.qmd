@@ -1,6 +1,6 @@
 ---
 title: Notes
-description: 공부하며 정리한 글을 모읍니다.
+description: What I've been thinking about.
 listing:
   contents: posts
   type: default
