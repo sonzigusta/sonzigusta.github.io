@@ -10,18 +10,18 @@ draft: false
 
 [이 글에서는 $e^{-i\omega t}$ 형태의 time convention 을 사용한다.]{style="color: red;"}
 
-[이 글에서는 Heaviside lorentz unit 을 사용한다.]{style="color: red;"}
+[이 글에서는 Heaviside–Lorentz units 을 사용한다.]{style="color: red;"}
 
 이 포스트에서는 전자파 복사의 기본원리와 우리가 알고있는 전자파 복사의 엄밀한 수학적 유도를 다루겠다. 
 
 또한, 비 상대론적 전자파 복사에 대한 내용을 다루고 추후에 상대론적 전자파 복사에 대한 내용을 다루겠다.
 
 
-## 1. Governing equations in inhomeneous wave equation
+## 1. Governing equations in inhomogeneous wave equation
 
-Heaviside lorentz unit 헤비시데 로런츠 단위계는 전자기학에서 사용되는 단위계 중 하나로, 전자파의 전자기장을 표현할때 절대적 물리량인 빛으로 표현해 수학적으로 매우 간단히 기술할수 있다. 
+Heaviside–Lorentz units 헤비사이드–로런츠 단위계는 전자기학에서 사용되는 단위계 중 하나로, 전자파의 전자기장을 표현할때 절대적 물리량인 빛으로 표현해 수학적으로 매우 간단히 기술할수 있다. 
 
-헤비시데 로런츠 단위계를 적용한 맥스웰 방정식은 다음과 같다.
+헤비사이드–로런츠 단위계를 적용한 맥스웰 방정식은 다음과 같다.
 
 $$
 \nabla\cdot\mathbf E=\rho,\quad
@@ -34,11 +34,11 @@ Inhomogeneous wave equation 에서
 
 $$
 \left(\frac{1}{c^2}\partial_t^2-\nabla^2\right)\mathbf{E}
-=-\frac{1}{c}\partial_t\mathbf{J}-\nabla\rho,
+=-\frac{1}{c^2}\partial_t\mathbf{J}-\nabla\rho,
 \quad \partial_t\rho + \nabla\cdot\mathbf{J}=0
 $$ {#eq-wave}
 
-여기서 $\rho$ 와 $\mathbf{J}$ 는 각각 전하 밀도와 전류 밀도이고 주어지는 값이고 \mathbf{E} 와 \mathbf{B} 는 우리가 구해야할 값이고 맥스웰 방정식에 따라 $\mathbf{E}$ 를 구하면 $\mathbf{B}$는 자동결정 된다.
+여기서 $\rho$ 와 $\mathbf{J}$ 는 각각 전하 밀도와 전류 밀도이고 주어지는 값이고 $\mathbf{E}$ 와 $\mathbf{B}$ 는 우리가 구해야할 값이고 맥스웰 방정식에 따라 $\mathbf{E}$ 를 구하면 $\mathbf{B}$는 자동결정 된다.
 
 식 [-@eq-wave]를 푸리에 변환 하면.
 
@@ -60,7 +60,7 @@ $$
 이때 $\mathbf{B}$ 도 같은 맥락으로
 
 $$
-\nabla\times\mathbf{E}_c=-\frac{1}{c}\partial_{t}\mathbf{B}\rightarrow\mathbf{B}=\frac{c}{\omega}\mathbf{k}\times\mathbf{E},\;\;\text{and}\;\;
+\nabla\times\mathbf{E}=-\frac{1}{c}\partial_{t}\mathbf{B}\rightarrow\mathbf{B}=\frac{c}{\omega}\mathbf{k}\times\mathbf{E},\;\;\text{and}\;\;
 \mathbf{B}=\mathbf{B_c} + \mathbf{B_p}=\frac{c}{\omega}\mathbf{k}\times\mathbf{E_c} + \frac{c}{\omega}\mathbf{k}\times\mathbf{E_p}
 $$
 
@@ -69,10 +69,10 @@ $$
 $$
 \mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\mathbf{k}\rho}{-\frac{\omega^2}{c^2}+k^2}
 \quad \text{\&} \quad
-\rho = \frac{\mathbf{k}\cdot\mathbf{J}}{\omega}\;\rightarrow\;\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega}}{-\frac{\omega^2}{c^2}+k^2}=\underbrace{-i\omega\frac{\mathbf{J}}{\omega^2-c^2k^2}}_{\mathbf{E}_{p1}} + \underbrace{i\frac{\frac{\omega^2}{c^2}\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega^2-c^2k^2}}_{\mathbf{E}_{p2}}
+\rho = \frac{\mathbf{k}\cdot\mathbf{J}}{\omega}\;\rightarrow\;\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega}}{-\frac{\omega^2}{c^2}+k^2}=\underbrace{-i\omega\frac{\mathbf{J}}{\omega^2-c^2k^2}}_{\mathbf{E}_{p1}} + \underbrace{i\frac{c^2}{\omega}\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega^2-c^2k^2}}_{\mathbf{E}_{p2}}
 $$
 
-이때 $\omega^2-c^2k^2=0$ 인 경우를 생각해보자 2개의 pole 점이 발생한다. 이때 직관을 믿으면 하나는 out going wave, 하나는 in coming wave 일것이다, 일단 이정도로만 의심하고 더욱 엄밀한 증명을 해보자.
+이때 $\omega^2-c^2k^2=0$ 인 경우를 생각해보자 2개의 pole 점이 발생한다. 이때 직관을 믿으면 하나는 outgoing wave, 하나는 incoming wave 일것이다, 일단 이정도로만 의심하고 더욱 엄밀한 증명을 해보자.
 
 점전하에 의해 발생하는 전류를 $\mathbf{J(\mathbf{r},t)}=q\delta(\mathbf{r}-\mathbf{x}(t))\frac{dx(t)}{dt}$ 라고 하자. 추가로 점전하가 움직이는 경로의 자취를 따라 계산되므로 관측점이 어디에 있든지 상관없이 점전하가 움직이는 경로를 따라 계산되므로 상대론적으로도 맞는 표현이다.
 
@@ -163,10 +163,10 @@ $$
 \frac{1}{(2\pi)^2ir}
 \int_{-\infty}^{\infty}dk\,
 \frac{ke^{ikr}}
-{\left(k-\frac{\omega}{c}\right)\left(k+\frac{\omega}{c}\right)}\rightarrow \frac{e^{i\omega r}}{4\pi r} \quad \text{(outgoing wave)}\quad
+{\left(k-\frac{\omega}{c}\right)\left(k+\frac{\omega}{c}\right)}\rightarrow \frac{e^{i\omega r/c}}{4\pi r} \quad \text{(outgoing wave)}\quad
 $$
 
-## 3. Residue therorm
+## 3. Residue theorem
 
 앞에서 변수 치환을 통해 적분구간을 실수축 전체로 확장하였다.
 이 형태에서는 복소평면에 폐곡선을 구성하여 유수정리(residue theorem)를
@@ -281,7 +281,7 @@ e^{ik_0r}e^{-\epsilon r}\\\\
 \end{aligned}
 $$
 
-## 4.  Accelerate particle radiation 
+## 4.  Radiation from an Accelerating Charge 
 
 $$
 \mathbf{E}_{p1}(\mathbf{r},t)=\frac{iq}{c^2}\int_{-\infty}^\infty\frac{d\omega}{2\pi}\omega\mathbf{v}(\omega)e^{-i\omega t}
@@ -293,15 +293,15 @@ $$
 $$
 -\frac{q}{4\pi c^2 r}\int^\infty_{-\infty}\frac{d\omega}{2\pi}(-i\omega)\mathbf{v}(\omega)e^{-i\omega(t-\frac{r}{c})} 
 =-\frac{q\frac{d\mathbf{v}(t-\frac{r}{c})}{dt}}{4\pi c^2 r}
-=\frac{q\mathbf{a}(t-\frac{r}{c})}{4\pi c^2 r}
+=-\frac{q\mathbf{a}(t-\frac{r}{c})}{4\pi c^2 r}
 $$
 
-한편 특수해의 두 번째 항 $\mathbf{E}_{p2}$는 다음과 같다.
+한편 특수해의 두 번째 항 $\mathbf{E}_{p2}$의 원거리 방사장 부분은 다음과 같다.
 
 $$
 \begin{aligned}
 \mathbf{E}_{p2}(\mathbf{r},t)
-&=iq\int\frac{d\omega\,d^3\mathbf{k}}{(2\pi)^4}
+&\simeq iq\int\frac{d\omega\,d^3\mathbf{k}}{(2\pi)^4}
 \frac{\omega\hat{\mathbf{k}}
 \bigl(\hat{\mathbf{k}}\cdot\mathbf{v}(\omega)\bigr)
 e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}}
@@ -454,9 +454,9 @@ $1/r$ 항은 방사장(radiation field)에 해당한다.
 
 $$
 \left\langle\mathbf{S}\right\rangle
-=\frac{1}{2}\operatorname{Re}
+=\frac{c}{2}\operatorname{Re}
 \left(
-\mathbf{E}_{\mathrm{rad}}\times\mathbf{H}_{\mathrm{rad}}^*
+\mathbf{E}_{\mathrm{rad}}\times\mathbf{B}_{\mathrm{rad}}^*
 \right)
 \propto\frac{1}{r^2}.
 $$
@@ -505,7 +505,7 @@ $$
 
 **이러한 원리는 다이폴 안테나의 도넛형태의 방사패턴이 형성되는 엄밀한 수학적 증명이다.**
 
-![다이폴 안테나 방사패턴](dipole_rad_test.png){#fig-acceleration width=500}
+![다이폴 안테나 방사패턴](dipole_rad_test.png){#fig-dipole-pattern width=500}
 
 ## 5. Reference
 
