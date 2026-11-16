@@ -612,7 +612,7 @@ $$
 $$
 
 이다. 따라서 자기장은 전기장과 진행 방향 모두에 수직하며,
-$ \mathbf{E}_p\times\mathbf{B}_p$ 는 바깥쪽 방사 방향을 향한다.
+$\mathbf{E}_p\times\mathbf{B}_p$ 는 바깥쪽 방사 방향을 향한다.
 
 ## 6. Reference
 
