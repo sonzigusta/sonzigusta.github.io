@@ -4,6 +4,7 @@ description: "Seungmin Son 의 생각"
 date: "2026-11-15"
 categories: ["Preface"]
 draft: false
+comments: false
 ---
 
 ## 시작하며

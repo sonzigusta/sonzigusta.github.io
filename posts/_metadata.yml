@@ -2,3 +2,15 @@ toc: true
 toc-title: On this page
 title-block-banner: false
 date-format: YYYY.MM.DD
+comments:
+  giscus:
+    repo: sonzigusta/sonzigusta.github.io
+    repo-id: R_kgDOVbWcwA
+    category: Post Comments
+    category-id: DIC_kwDOVbWcwM4DLPiN
+    mapping: pathname
+    reactions-enabled: true
+    input-position: top
+    theme: light
+    language: ko
+    loading: lazy
