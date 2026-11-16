@@ -3,6 +3,9 @@ title: SWR Notes
 pagetitle: SWR Notes
 page-layout: full
 body-classes: home
+include-in-header:
+  text: |
+    <meta name="google-site-verification" content="SpthnSQa8iRAw9xjgOUBceLhlky4Zb2eH4IXeHl0zCs" />
 ---
 
 ::: {.home-hero}
