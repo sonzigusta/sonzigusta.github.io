@@ -67,7 +67,7 @@ $$
 ## 2. Electric field $\mathbf{E}_p$
 
 $$
-\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\\mathbf{k}\rho}{-\frac{\omega^2}{c^2}+k^2}
+\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\mathbf{k}\rho}{-\frac{\omega^2}{c^2}+k^2}
 \quad \text{\&} \quad
 \rho = \frac{\mathbf{k}\cdot\mathbf{J}}{\omega}\;\rightarrow\;\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega}}{-\frac{\omega^2}{c^2}+k^2}=\underbrace{-i\omega\frac{\mathbf{J}}{\omega^2-c^2k^2}}_{\mathbf{E}_{p1}} + \underbrace{i\omega\frac{c^2}{\omega^2}\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega^2-c^2k^2}}_{\mathbf{E}_{p2}}
 $$ {#eq-E_field}
@@ -612,7 +612,7 @@ $$
 $$
 
 이다. 따라서 자기장은 전기장과 진행 방향 모두에 수직하며,
-$\mathbf{E}_p\times\mathbf{B}_p$ 는 바깥쪽 방사 방향을 향한다.
+$ \mathbf{E}_p\times\mathbf{B}_p$ 는 바깥쪽 방사 방향을 향한다.
 
 ## 6. Reference
 
