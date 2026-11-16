@@ -67,10 +67,10 @@ $$
 ## 2. Electric field $\mathbf{E}_p$
 
 $$
-\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\mathbf{k}\rho}{-\frac{\omega^2}{c^2}+k^2}
+\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\\mathbf{k}\rho}{-\frac{\omega^2}{c^2}+k^2}
 \quad \text{\&} \quad
-\rho = \frac{\mathbf{k}\cdot\mathbf{J}}{\omega}\;\rightarrow\;\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega}}{-\frac{\omega^2}{c^2}+k^2}=\underbrace{-i\omega\frac{\mathbf{J}}{\omega^2-c^2k^2}}_{\mathbf{E}_{p1}} + \underbrace{i\frac{c^2}{\omega}\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega^2-c^2k^2}}_{\mathbf{E}_{p2}}
-$$
+\rho = \frac{\mathbf{k}\cdot\mathbf{J}}{\omega}\;\rightarrow\;\mathbf{E}_p = \frac{i\frac{\omega}{c^2}\mathbf{J}-i\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega}}{-\frac{\omega^2}{c^2}+k^2}=\underbrace{-i\omega\frac{\mathbf{J}}{\omega^2-c^2k^2}}_{\mathbf{E}_{p1}} + \underbrace{i\omega\frac{c^2}{\omega^2}\frac{\mathbf{k}(\mathbf{k}\cdot\mathbf{J})}{\omega^2-c^2k^2}}_{\mathbf{E}_{p2}}
+$$ {#eq-E_field}
 
 이때 $\omega^2-c^2k^2=0$ 인 경우를 생각해보자 2개의 pole 점이 발생한다. 이때 직관을 믿으면 하나는 outgoing wave, 하나는 incoming wave 일것이다, 일단 이정도로만 의심하고 더욱 엄밀한 증명을 해보자.
 
@@ -503,7 +503,120 @@ $$
 
 따라서 관측자가 전하의 가속 방향과 평행한 위치에 있다면 원거리 방사 에너지를 전달받지 못하지만, 가속 방향에 수직인 위치에서는 최대의 방사 에너지를 전달받는다.
 
-## 5. Reference
+## 5. Magnetic field $\mathbf{B}_p$
+
+이제 전기장을 다 구했으니 자기장을 구해보자.  [-@eq-E_field] 식에서 $\mathbf{B}_p = \frac{c}{\omega}\mathbf{k}\times\mathbf{E}_p$ 관계를 사용하면.
+
+$$
+\mathbf{B}_p = -ic \frac{\mathbf{k}\times\mathbf{J}}{\omega^2-c^2k^2} = -iqc\frac{\mathbf{k}\times\mathbf{v}}{\omega^2-c^2k^2}
+$$
+
+이를 실공간으로 넘기기위해 푸리에 역변환 하면
+
+$$
+\mathbf{B}_p(\mathbf{r},t) = -iqc\int \frac{d\omega d\mathbf{k}}{(2\pi)^4} 
+\frac{\mathbf{k}\times\mathbf{v}(\omega)e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}}{\omega^2-c^2k^2}
+$$
+
+전기장을 구할 때와 같이 분모를 정리하면
+
+$$
+\mathbf{B}_p(\mathbf{r},t)
+=-\frac{iq}{c}\int\frac{d\omega}{2\pi}\,
+e^{-i\omega t}\mathbf{v}(\omega)\times
+\int\frac{d^3\mathbf{k}}{(2\pi)^3}
+\frac{\mathbf{k}e^{i\mathbf{k}\cdot\mathbf{r}}}
+{k^2-\frac{\omega^2}{c^2}}.
+$$
+
+관측 방향 $\hat{\mathbf{n}}$을 $z$축으로 잡고 $\eta=\cos\theta$로 두면,
+$\phi$ 적분에서 관측 방향에 수직인 성분은 사라진다. 따라서
+
+$$
+\int\frac{d^3\mathbf{k}}{(2\pi)^3}
+\frac{\mathbf{k}e^{i\mathbf{k}\cdot\mathbf{r}}}
+{k^2-\frac{\omega^2}{c^2}}
+=
+\frac{\hat{\mathbf{n}}}{(2\pi)^2}
+\int_0^\infty dk\,
+\frac{k^3}{k^2-\frac{\omega^2}{c^2}}
+\int_{-1}^{1}d\eta\,\eta e^{ikr\eta}.
+$$
+
+여기서 각도 적분은
+
+$$
+\int_{-1}^{1}d\eta\,\eta e^{ikr\eta}
+=
+\frac{e^{ikr}+e^{-ikr}}{ikr}
++\frac{e^{ikr}-e^{-ikr}}{k^2r^2}
+$$
+
+이다. 원거리에서 $1/r$에 비례하는 방사장 항만 남기고,
+앞서 전기장에서 사용한 outgoing-wave 극점 처방으로 적분하면
+
+$$
+\begin{aligned}
+\int\frac{d^3\mathbf{k}}{(2\pi)^3}
+\frac{\mathbf{k}e^{i\mathbf{k}\cdot\mathbf{r}}}
+{k^2-\frac{\omega^2}{c^2}}
+&\simeq
+\frac{\hat{\mathbf{n}}}{(2\pi)^2ir}
+\int_0^\infty dk\,
+\frac{k^2(e^{ikr}+e^{-ikr})}
+{k^2-\frac{\omega^2}{c^2}}\\\\
+&=
+\frac{\hat{\mathbf{n}}}{(2\pi)^2ir}
+\int_{-\infty}^{\infty}dk\,
+\frac{k^2e^{ikr}}
+{\left(k-\frac{\omega}{c}\right)
+ \left(k+\frac{\omega}{c}\right)}\\\\
+&=
+\frac{\hat{\mathbf{n}}}{(2\pi)^2ir}
+\,2\pi i\,\frac{\omega}{2c}e^{i\omega r/c}\\\\
+&=
+\frac{\omega}{4\pi cr}
+e^{i\omega r/c}\hat{\mathbf{n}}.
+\end{aligned}
+$$
+
+이를 대입하고 외적의 순서를 바꾸면
+
+$$
+\begin{aligned}
+\mathbf{B}_p(\mathbf{r},t)
+&\simeq
+\frac{iq}{4\pi c^2r}\,
+\hat{\mathbf{n}}\times
+\int\frac{d\omega}{2\pi}\,
+\omega\mathbf{v}(\omega)
+e^{-i\omega(t-r/c)}\\\\
+&=
+-\frac{q}{4\pi c^2r}\,
+\hat{\mathbf{n}}\times
+\int\frac{d\omega}{2\pi}\,
+(-i\omega)\mathbf{v}(\omega)
+e^{-i\omega(t-r/c)}\\\\
+&=
+-\frac{q}{4\pi c^2r}\,
+\hat{\mathbf{n}}\times
+\mathbf{a}\left(t-\frac{r}{c}\right).
+\end{aligned}
+$$
+
+앞서 구한 전기장의 방사장과 비교하면, 원거리에서
+
+$$
+
+\mathbf{B}_p(\mathbf{r},t)
+= \hat{\mathbf{n}}\times\mathbf{E}_p(\mathbf{r},t)
+
+$$
+
+이다. 따라서 자기장은 전기장과 진행 방향 모두에 수직하며,
+$\mathbf{E}_p\times\mathbf{B}_p$는 바깥쪽 방사 방향을 향한다.
+
+## 6. Reference
 
 [1] J. D. Jackson, *Classical Electrodynamics*, 3rd ed. New York, NY, USA: John Wiley & Sons, 1999.
 
