@@ -607,14 +607,12 @@ $$
 앞서 구한 전기장의 방사장과 비교하면, 원거리에서
 
 $$
-
 \mathbf{B}_p(\mathbf{r},t)
 = \hat{\mathbf{n}}\times\mathbf{E}_p(\mathbf{r},t)
-
 $$
 
 이다. 따라서 자기장은 전기장과 진행 방향 모두에 수직하며,
-$\mathbf{E}_p\times\mathbf{B}_p$는 바깥쪽 방사 방향을 향한다.
+$\mathbf{E}_p\times\mathbf{B}_p$ 는 바깥쪽 방사 방향을 향한다.
 
 ## 6. Reference
 
