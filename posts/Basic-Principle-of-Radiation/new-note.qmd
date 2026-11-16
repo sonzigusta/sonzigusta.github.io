@@ -305,7 +305,7 @@ $$
 \frac{\omega\hat{\mathbf{k}}
 \bigl(\hat{\mathbf{k}}\cdot\mathbf{v}(\omega)\bigr)
 e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}}
-{\omega^2-c^2k^2}\\
+{\omega^2-c^2k^2}\\\\
 &=-\frac{iq}{c^2}\int\frac{d\omega}{2\pi}\,
 \omega e^{-i\omega t}
 \left[
@@ -381,12 +381,12 @@ $$
 &\int\frac{d^3\mathbf{k}}{(2\pi)^3}
 \frac{e^{i\mathbf{k}\cdot\mathbf{r}}}
 {k^2-\frac{\omega^2}{c^2}}
-\sin^2\theta\cos^2\phi\\
+\sin^2\theta\cos^2\phi\\\\
 &\qquad=
 \int\frac{d^3\mathbf{k}}{(2\pi)^3}
 \frac{e^{i\mathbf{k}\cdot\mathbf{r}}}
 {k^2-\frac{\omega^2}{c^2}}
-\sin^2\theta\sin^2\phi\\
+\sin^2\theta\sin^2\phi\\\\
 &\qquad=
 \frac{\pi}{(2\pi)^3}
 \int_0^\infty dk\,
@@ -402,7 +402,7 @@ $$
 &\int\frac{d^3\mathbf{k}}{(2\pi)^3}
 \frac{e^{i\mathbf{k}\cdot\mathbf{r}}}
 {k^2-\frac{\omega^2}{c^2}}
-\cos^2\theta\\
+\cos^2\theta\\\\
 &\qquad=
 \frac{2\pi}{(2\pi)^3}
 \int_0^\infty dk\,
@@ -424,7 +424,7 @@ $$
 \begin{aligned}
 \int_{-1}^{1}d\eta\,e^{ikr\eta}\eta^2
 &=-\frac{d^2}{d(kr)^2}
-\left(\frac{e^{ikr}-e^{-ikr}}{ikr}\right)\\
+\left(\frac{e^{ikr}-e^{-ikr}}{ikr}\right)\\\\
 &=\frac{e^{ikr}-e^{-ikr}}{ikr}
 +\frac{2(e^{ikr}+e^{-ikr})}{k^2r^2}
 +\frac{2i(e^{ikr}-e^{-ikr})}{k^3r^3}
@@ -502,10 +502,6 @@ $$
 또한 방사 전기장은 전하의 전체 가속도가 아닌 **관측 방향에 수직인 가속도 성분(Transverse Acceleration)**에 의해서만 결정된다.
 
 따라서 관측자가 전하의 가속 방향과 평행한 위치에 있다면 원거리 방사 에너지를 전달받지 못하지만, 가속 방향에 수직인 위치에서는 최대의 방사 에너지를 전달받는다.
-
-**이러한 원리는 다이폴 안테나의 도넛형태의 방사패턴이 형성되는 엄밀한 수학적 증명이다.**
-
-![다이폴 안테나 방사패턴](dipole_rad_test.png){#fig-dipole-pattern width=500}
 
 ## 5. Reference
 
