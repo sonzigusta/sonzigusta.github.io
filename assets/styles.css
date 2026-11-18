@@ -88,3 +88,17 @@ body:not(.has-notes) .quarto-listing .listing-actions-group { display: none; }
 .note-topics button[aria-pressed="true"] { background: var(--swr-teal); border-color: var(--swr-teal); color: white; }
 .note-topics button:focus-visible { outline: 2px solid #24748b; outline-offset: 3px; }
 .quarto-post .listing-categories .listing-category { text-transform: none; }
+
+/* Notes: broad subject collections, with automatic post counts. */
+.notes-category-section { margin: 1.5rem 0 2.5rem; }
+.notes-category-section h2 { font-size: 1rem; color: #647278; margin: 0 0 1rem; font-family: system-ui, sans-serif; }
+.note-topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 0; }
+.note-topics button { display: flex; flex-direction: column; gap: 10px; text-align: left; padding: 20px; border-radius: 6px; cursor: pointer; }
+.note-topics button:hover { border-color: var(--swr-teal); }
+.note-topic-title { font-size: 1.15rem; font-weight: 600; }
+.note-topic-count { font: 13px system-ui, sans-serif; opacity: .8; }
+#notes-list-heading { margin: 0 0 1rem; font-size: 1.5rem; }
+@media (max-width: 480px) {
+  .note-topics { grid-template-columns: 1fr; }
+  .note-topics button { flex-direction: row; justify-content: space-between; align-items: center; padding: 15px; }
+}

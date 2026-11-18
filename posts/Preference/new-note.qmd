@@ -2,7 +2,7 @@
 title: "Preface"
 description: "Seungmin Son 의 생각"
 date: "2026-11-15"
-categories: ["Preface"]
+categories: ["Just Talking"]
 draft: false
 comments: false
 ---

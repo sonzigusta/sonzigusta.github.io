@@ -1,11 +1,11 @@
 ---
 title: Notes
-description: What I've been thinking about.
+description: 주제별로 모아 둔 공부와 생각의 기록.
 listing:
   contents: posts
   type: default
   sort: date desc
-  categories: false
+  categories: true
   fields: [title, description, date, categories]
   filter-ui: [title, description, categories]
   sort-ui: false
@@ -13,7 +13,11 @@ listing:
 ---
 
 ```{=html}
-<div id="note-topics" class="note-topics" role="group" aria-label="Filter notes by subject"></div>
+<section class="notes-category-section" aria-labelledby="notes-category-heading">
+<h2 id="notes-category-heading">Categories</h2>
+<div id="note-topics" class="note-topics" role="navigation" aria-label="글 카테고리"></div>
+</section>
+<h2 id="notes-list-heading" aria-live="polite">전체 글</h2>
 ```
 
 ::: {.notes-empty}
