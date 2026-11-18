@@ -21,15 +21,13 @@ for (const item of items) {
       <summary>
         <span class="collection-title"><%- category %></span>
         <span class="collection-chevron" aria-hidden="true"></span>
-        <span class="collection-count" aria-label="<%- posts.length %> notes"><%- posts.length %> <%- posts.length === 1 ? 'note' : 'notes' %></span>
+        <span class="collection-count" aria-label="<%- posts.length %> <%- posts.length === 1 ? 'note' : 'notes' %>"><%- posts.length %> <%- posts.length === 1 ? 'note' : 'notes' %></span>
       </summary>
       <div class="collection-posts">
       <% for (const item of posts) { %>
         <article class="collection-post">
-          <div class="collection-post-copy">
             <h2><a href="<%- item.path %>"><%= item.title %></a></h2>
-            <% if (item.description) { %><div class="collection-description"><%= item.description %></div><% } %>
-          </div>
+          <div class="collection-description"><% if (item.description) { %><%= item.description %><% } %></div>
           <% if (item.date) { %><span class="collection-date"><%- item.date %></span><% } %>
         </article>
       <% } %>
