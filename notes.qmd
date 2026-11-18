@@ -3,26 +3,12 @@ title: Notes
 description: 주제별로 모아 둔 공부와 생각의 기록.
 listing:
   contents: posts
-  type: default
+  template: templates/notes-accordion.ejs.md
   sort: date desc
-  categories: true
-  fields: [title, description, date, categories]
-  filter-ui: [title, description, categories]
+  categories: false
   sort-ui: false
-  page-size: 20
+  filter-ui: false
 ---
-
-```{=html}
-<section class="notes-category-section" aria-labelledby="notes-category-heading">
-<h2 id="notes-category-heading">Categories</h2>
-<div id="note-topics" class="note-topics" role="navigation" aria-label="글 카테고리"></div>
-</section>
-<h2 id="notes-list-heading" aria-live="polite">전체 글</h2>
-```
-
-::: {.notes-empty}
-아직 공개한 글이 없습니다.
-:::
 
 ```{=html}
 <script defer src="assets/notes.js"></script>
