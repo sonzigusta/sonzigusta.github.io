@@ -20,8 +20,8 @@ for (const item of items) {
     <details class="notes-collection" data-category="<%- category %>">
       <summary>
         <span class="collection-title"><%- category %></span>
-        <span class="collection-count" aria-label="<%- posts.length %> notes"><%- String(posts.length).padStart(2, '0') %></span>
         <span class="collection-chevron" aria-hidden="true"></span>
+        <span class="collection-count" aria-label="<%- posts.length %> notes"><%- posts.length %> <%- posts.length === 1 ? 'note' : 'notes' %></span>
       </summary>
       <div class="collection-posts">
       <% for (const item of posts) { %>
