@@ -1,6 +1,6 @@
 ---
 title: Notes
-description: 주제별로 모아 둔 공부와 생각의 기록.
+description: Field notes on waves, equations, and everything in between.
 listing:
   contents: posts
   template: templates/notes-accordion.ejs.md
