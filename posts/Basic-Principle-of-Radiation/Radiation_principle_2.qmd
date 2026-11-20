@@ -1,0 +1,7 @@
+---
+title: "전자파 복사 (2)"
+description: "전자파가 방출하는 복사전력"
+date: "2026-11-20"
+categories: ["Electrodynamics"]
+draft: false
+---

@@ -1,6 +1,6 @@
 ---
-title: "전자파 복사"
-description: "전자파 복사의 기본 원리 및 안테나 복사 패턴 형성 원리"
+title: "전자파 복사 (1)"
+description: "전자파 복사의 기본 원리"
 date: "2026-11-15"
 categories: ["Electrodynamics"]
 draft: false
